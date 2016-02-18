@@ -21,10 +21,7 @@ options for two fingers touch to act as a right-click and three fingers touch to
 
 https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg#Configuring_compose_key
 
-**/etc/X11/xorg.conf.d/00-keyboard.conf**
-
 ```
-Section "InputClass"
-    Option "XkbOptions" "compose:ralt"
-EndSection
+localectl --no-convert set-x11-keymap compose:ralt
+cat cat /etc/X11/xorg.conf.d/00-keyboard.conf
 ```
