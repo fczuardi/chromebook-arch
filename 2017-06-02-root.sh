@@ -6,9 +6,6 @@ passwd
 echo "2. Connect to internet"
 wifi-menu
 
-echo "2. Connect to internet"
-wifi-menu
-
 echo "3. Sync Pacman db"
 pacman -Syy
 
@@ -18,7 +15,10 @@ pacman -Su
 echo "5. Install sudo"
 pacman -S sudo
 
-echo "6. Create admin user"
+echo "6. Install curl"
+pacman -S curl
+
+echo "7. Create admin user"
 useradd -m -G wheel -s /bin/bash fcz
 passwd fcz
 visudo
